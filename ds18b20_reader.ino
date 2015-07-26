@@ -28,9 +28,9 @@ void loop(void) {
     Serial.print(" ");
   }
   Serial.println("");
-  Serial.print("Address High: ");
-  Serial.println((unsigned int) (addr[1] << 8 | addr[0]));
   Serial.print("Address Low: ");
+  Serial.println((unsigned int) (addr[1] << 8 | addr[0]));
+  Serial.print("Address High: ");
   Serial.println((unsigned int) (addr[3] << 8 | addr[2]));
 
   if ( OneWire::crc8( addr, 7) != addr[7]) {
